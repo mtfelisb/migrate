@@ -62,7 +62,7 @@ type versionDoc struct {
 }
 
 // WithInstance allows the client to provide an instance and migrate using it.
-func (d *OpenSearch) WithInstance(instance *opensearch.Client, config *Config) (database.Driver, error) {
+func WithInstance(instance *opensearch.Client, config *Config) (database.Driver, error) {
 	if config == nil {
 		return nil, ErrMissingConfig
 	}
